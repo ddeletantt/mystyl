@@ -1,0 +1,298 @@
+* { 
+  box-sizing: border-box;
+}
+
+body{
+  padding: 0;
+  margin: 0;/*внешний отступ*/
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display:block;/*Элемент показывается как блочный*/
+  position: sticky;/*«прилипает» к экрану при прокрутке*/
+  top: 10px;/*отступ сверху*/
+  text-align:center;/*текст по центру*/
+  background-color: rgb(0, 0, 0);/*цвет фона*/
+  padding: 1px;/*внутренний отступ*/
+  margin: 10px;/*внешний отступ*/
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.header__logo {
+  color:rgb(255, 255, 255); /*цвет ссылки*/ ;
+}
+
+.header__logo_title {
+  text-align: center; /*текст по центру*/
+}
+
+.menu__item > a {   
+  text-decoration: none; /*не подчеркивает ссылки*/
+  color: rgb(255, 255, 255); /*цвет ссылки*/
+}
+
+.menu__list{
+  padding: 0px;/*внутренний отступ*/
+  margin: 0px;/*внешний отступ*/
+}
+
+.menu__item {
+  display: inline-block; /*блочный элемент обтекаемый другими элементами*/
+  align-items: center;/*центролизовать блоки*/
+  padding: 5px 20px;/*внутренний отступ*/
+  font-weight: 600;/*начертание шрифта.*/
+}
+
+.menu__item > a:hover {
+  text-decoration: underline;
+}
+
+input{
+  display: none;/*не показывает кнопку флажок*/
+}
+
+.main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding: 50px 20px;
+}
+
+.hero__title {
+  font-size: 48px;
+  margin-top: 0;
+  color:rgb(0, 0, 0)
+}
+
+.hero__subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color:rgb(0, 0, 0)
+}
+
+.about {
+margin-top: 60px;
+}
+
+.about__title {
+font-size: 36px;
+margin-bottom: 10px;
+padding-left: 20px;
+}
+
+.about__text {
+font-size: 18px;
+line-height: 1.5;
+margin-bottom: 40px;
+padding: 20px;
+}
+
+.programs {
+margin-top: 60px;
+}
+
+.programs__title {
+padding-left: 20px;
+font-size: 36px;
+margin-bottom: 20px;
+}
+
+.programs__list {
+list-style: none;
+margin: 0;
+padding: 0;
+display: flex;
+flex-wrap: wrap;
+}
+
+.programs__item {
+width: calc(33.33% - 20px);
+margin-right: 20px;
+margin-bottom: 20px;
+background-color:rgb(255, 255, 255);
+border-radius: 5px;
+padding: 20px;
+}
+
+.programs__item:last-child {
+margin-right: 0;
+}
+
+.programs__item__title {
+font-size: 24px;
+margin-top: 0;
+margin-bottom: 10px;
+}
+
+.programs__item__text {
+font-size: 16px;
+line-height: 1.5;
+margin-bottom: 0;
+}
+
+/* только для экранов не больше 1180 пикселей, бургер меню*/
+@media screen and (max-width: 1180px){  
+  .header {
+    display: block;/*Элемент показывается как блочный*/
+    position: sticky;/*«прилипает» к экрану при прокрутке*/
+    top:10px;/*отступ сверху*/
+    text-align: left;/*приравнивание текста влево*/
+    padding: 10px;/*внутренний отступ*/
+    margin: 10px;/*внешние отступы*/
+  }
+
+  .header__logo{
+    font-size:1em;
+    padding-right: 30px;
+  }
+
+  /*кнопка бургер меню*/
+  .burger__menu_bottom{
+    float: right;
+    display: flex;
+    align-items: center;
+    position: fixed;/*Когда страницу прокручивают, фиксированный элемент остаётся на своём месте*/
+    top: 5px;
+    right: 20px;
+    width: 26px;
+    height: 50px;
+    cursor: pointer;/*мышь меняеться на указатель*/
+    z-index: 1;/*определяет положение позиционированного элемента и его дочерних элементов*/
+  }
+
+  /*кнопка открытого бургер меню*/
+  .burger__menu_bottom > span,
+  .burger__menu_bottom > span::before,
+  .burger__menu_bottom > span::after {
+    display: block;
+    position:absolute;/*Элемент исчезает с того места, где он должен быть и позиционируется заново
+    Остальные элементы, располагаются так, как будто этого элемента никогда не было.*/
+    width: 100%; 
+    height: 2px; 
+    background-color: rgb(255, 255, 255);
+  }
+
+  /*вверхний элемент*/
+  .burger__menu_bottom > span::before {
+    content: '';/*"элемента призрака", с помощью которого центрирую объект.*/
+    top: -8px; 
+  }
+
+  /*нижний элемент*/
+  .burger__menu_bottom > span::after {
+    content: '';/*"элемента призрака", с помощью которого центрирую объект.*/
+    top: 8px;
+  }
+
+  /*открытое бургер меню*/
+  .menu {
+    display: block;/*Элемент показывается как блочный*/
+    position: fixed;/* элемент остаётся на своём месте и не прокручивается вместе со страницей.*/
+    top: 0px;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    padding: 30px 0;
+    list-style: none;/*список без точек*/
+    text-align: center;/*текст по центру */
+    background-color: rgb(0, 0, 0, 0.8);
+    border-radius: 10px;
+  }
+
+  /*открытоe меню бургер, текст*/
+  .menu__item {
+    display: block;
+    padding: 10px 0px;
+    margin: 10px 0px;
+    font-size: 20px;
+    font-weight: 600;/*начертание шрифта.*/
+    text-decoration: none;/*не подчеркивает ссылки*/
+  }
+
+  /*отступы открытого бургер меню*/
+  #burger__menu_toggle:checked ~ .menu {
+    visibility: visible;/*показывает элемент без изменения разметки*/
+    top: 10px;
+    right: 10px;
+  }
+
+  /*при наведении на ссылку в открытом меню*/
+  .menu__item > a:hover {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+  }
+
+  /*ссылка в открытом меню*/
+  .menu__item > a {
+    text-decoration: none;/*не подчеркиваеться ссылка*/
+    color: rgb(255, 255, 255);
+  }
+}
+
+@media (max-width: 768px) {
+.programs__title {
+  font-size: 24px;
+}
+
+.programs__item {
+  width: 100%;
+  margin-right: 0;
+}
+}
+
+@media (max-width: 300px) {
+  .hero__title{
+    font-size: 2em;
+  }
+
+  .hero__subtitle{
+    font-size: 1em;
+  }
+}
+
+footer{
+  background-color: rgb(255, 255, 255);
+  padding-left: 20px;
+}
+
+footer h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+footer p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer li {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer hr {
+  border: none;
+  height: 1px;
+  margin: 20px 0;
+  background-color: rgb(201, 201, 201);
+}
