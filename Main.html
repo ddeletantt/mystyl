@@ -1,45 +1,78 @@
 <!DOCTYPE html>
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>КГУ"УНСШ"</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-  <body>  
-    <header class="header">
-        <h1 class=" header__logo">КГУ "Улкен Нарынская Cредняя Школа"</h1>
-        
-      <div class="burger__menu">
-        <input id="burger__menu_toggle" type="checkbox">
-          <label class="burger__menu_bottom" for="burger__menu_toggle">
-            <span></span>
-          </label>
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__item"><a href="#">На главную</a></li>
-              <li class="menu__item"><a href="#">Альбом</a></li>
-              <li class="menu__item"><a href="#">Любимый предмет</a></li>
-              <li class="menu__item"><a href="#">О себе</a></li>
-              <li class="menu__item"><a href="#">Тест</a></li>
-            </ul>
-          </nav>
+    <link rel="stylesheet" href="../CSS/main_1.css"> 
+  </head>
+  <body>
+    <header>  
+
+      <div class="heder__title">
+        <p class="title__text">УНСШ</p>
       </div>
 
+      <div class="header__menu">
+        <nav class="menu__nav">
+          <ul class="nav__list">
+            <li class="list__item"><a href="#">На главную</a></li>
+            <li class="list__item"><a href="#">Альбом</a></li>
+            <li class="list__item"><a href="#">Любимый предмет</a></li>
+            <li class="list__item"><a href="#">О себе</a></li>
+            <li class="list__item"><a href="#">Тест</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <main class="main">
-      
-      <section class="hero">
-        <h1 class="hero__title">Добро пожаловать</h1>
-        <p class="hero__subtitle">Мы предостовляем возможности открытия талантов в ваших детях</p>
-      </section>
-      
-      <section class="about">
-        <h2 class="about__title">О нас</h2>
-        <p class="about__text">Поступление ребенка в первый класс - одно из важнейших и волнующих событий в жизни каждого родителя. Поэтому необходимо серьезно подойти к решению этого вопроса: выбрать хорошую школу, обязательно познакомиться с учителем. Ведь именно в начальной школе формируется желание учиться и узнавать новое, умение усваивать материал, умение находить общий язык со сверстниками, происходит дальнейшее развитие определенных способностей. Улкен Нарынская средняя школа - ведущее учебное заведение, которое уже более 50 лет предоставляет высококачественное образование. Мы предлагаем целый ряд направлений, которые помогут вашим детям достичь своих целей, в том числе...</p>
-      </section>
 
-      <section class="programs">
-        <h2 class="programs__title">Наши направления</h2>
+    <hr class="whitespace">
+
+    <main>
+      <div class="main__top">
+        <div class="main__top_title">
+          <p>Залог нашего <span class="title__text_red">будущего</span> <br> Качественное <span class="title__text_red">образование </span></p>
+        </div>
+
+        <div class="main__top_subtitle">
+          <p>иновационное обучение только у нас </p>
+        </div>
+        <table class="main__top_table">
+          <tr>
+            <td>
+              <p><img src="../pictures/table__persona.png"> Хороший педагогический состав</p>
+            </td>
+            <td>
+              <p><img src="../pictures/table__house.png">недалеко от дома</p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p><img src="../pictures/table__creativity.png">Насыщенная творческая жизнь</p>
+            </td>
+            <td>
+              <p><img src="../pictures/table__free.png">Обсолютно бесплатно</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="main__content">
+      <div class="about">
+        <div class="about__text">
+          <div class="about__text_title">
+            <p>О нас</p>
+          </div>
+          <div class="about__text_subtitle">
+            <p>Поступление ребенка в первый класс - одно из важнейших и волнующих событий в жизни каждого родителя. Поэтому необходимо серьезно подойти к решению этого вопроса: выбрать хорошую школу, обязательно познакомиться с учителем. Ведь именно в начальной школе формируется желание учиться и узнавать новое, умение усваивать материал, умение находить общий язык со сверстниками, происходит дальнейшее развитие определенных способностей. Улкен Нарынская средняя школа - ведущее учебное заведение, которое уже более 50 лет предоставляет высококачественное образование.</p>
+          </div>
+        </div>
+            <div class="about__img">
+              <img src="../pictures/school.jpg">
+            </div>
+      </div>
+
+      <div class="programs">
+        <p class="programs__title">Наши направления</p>
         <ul class="programs__list">
             <li class="programs__item">
                 <h3 class="programs__item-title">Гуманитарное направление</h3>
@@ -54,28 +87,29 @@
                 <p class="programs__item-description">включает программы, предметно связанные с изучением общеобразовательных программ, а также внешкольных дисциплин: астрономии, геологии, палеонтологии, медицины. Программы по экологии и биологии являются самыми популярными. Детям предлагаются многие прикладные программы.</p>
             </li>
         </ul>
-      </section>
+      </div>
+      </div>
+    </main>
 
-      <footer>
-        <hr>
-        <div class="footer__menu">
-            <div class="footer__address">
-              <h3>Наш адрес</h3>
-              <p> с.Улкен Нарын, ул.Шулятикова, д. 64</p>
-            </div>
-            <div class="footer__contacts">
-              <h3>Контакты</h3>
-              <p>Телефон: +7 (72341) 2 16-00</p>
-              <p>Email: lenina_bnarim@mail.ru</p>
-            </div>
-            <hr>
-            <div class="footer__rights">
-              <p>&copy; 2023 Улкен Нарынская средняя школа все права защищены</p>
-            </div>
-        </div>
-      </footer>
-      
-      
-    </main>    
+    <footer>
+      <hr>
+      <div class="footer__menu">
+          <div class="footer__address">
+            <h3>Наш адрес</h3>
+            <p> с.Улкен Нарын, ул.Шулятикова, д. 64</p>
+          </div>
+          <div class="footer__contacts">
+            <h3>Контакты</h3>
+            <p>Телефон: +7-(72341)-2-16-00</p>
+            <br>
+            <p>Email: lenina_bnarim@mail.ru</p>
+          </div>
+          <hr>
+          <div class="footer__rights">
+            <p>&copy; 2023 Улкен Нарынская средняя школа все права защищены</p>
+          </div>
+      </div>
+    </footer>
+    
   </body>
 </html>
